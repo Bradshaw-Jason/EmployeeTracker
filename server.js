@@ -1,5 +1,6 @@
 const express = require('express');
 const mysql = require('mysql2');
+const inquirer = require("inquirer");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -11,11 +12,13 @@ app.use(express.json());
 const db = mysql.createConnection(
   {
     host: 'localhost',
-    // MySQL username,
+    // Add MySQL username here,
     user: 'root',
-    // TODO: Add MySQL password here
-    password: '',
-    database: 'movies_db'
+    // Add MySQL password here
+    password: 'RAmonkey202017',
+    database: 'employeeList_db'
   },
-  console.log(`Connected to the movies_db database.`)
+  console.log(`Connected to the employeeList_db database.`)
 );
+
+
